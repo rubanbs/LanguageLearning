@@ -1,3 +1,4 @@
+(function(angular) {
 
 	angular
 		.module('storage', [])
@@ -36,3 +37,5 @@
 			}
 		};
 	}
+
+})(window.angular);

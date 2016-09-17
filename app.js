@@ -1,8 +1,10 @@
+(function(angular) {
 
 	angular
 		.module('app', [
 			'storage',
 			'ngRoute',
+			'ngAnimate',
 			'main.controller',
 			'word.controller'
 		])
@@ -15,3 +17,4 @@
 				controller: 'WordController'
 			});
 	}
+})(window.angular);

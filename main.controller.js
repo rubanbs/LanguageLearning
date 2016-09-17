@@ -1,3 +1,4 @@
+(function(angular) {
 
 	angular
 		.module('main.controller', [])
@@ -6,3 +7,5 @@
 	function MainController (){
 		
 	}
+
+})(window.angular);

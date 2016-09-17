@@ -1,3 +1,4 @@
+(function(angular) {
 
 	angular
 		.module('word.controller', [])
@@ -9,6 +10,7 @@
 		
 		if (word) {
 			$scope.origin = word.origin;
-		}
-		
+		}		
 	}
+
+})(window.angular);
