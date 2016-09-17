@@ -774,3 +774,5 @@
 /node_modules/statuses/codes.json
 /node_modules/statuses/index.js
 /node_modules/statuses/package.json
+/bower_components
+/node_modules
