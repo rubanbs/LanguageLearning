@@ -1,0 +1,25 @@
+<!doctype html>
+<html ng-app="app">
+<head>
+	<link type="text/css" rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" />
+	<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+	<script type="text/javascript" src="bower_components/angular/angular.js"></script>
+	<script type="text/javascript" src="bower_components/angular-route/angular-route.min.js"></script>
+	<script type="text/javascript" src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+	<script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="bower_components/lodash/dist/lodash.min.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+	<script type="text/javascript" src="storage.js"></script>
+	<script type="text/javascript" src="main.controller.js"></script>
+	<script type="text/javascript" src="word.controller.js"></script>
+</head>
+<body ng-controller="MainController">
+	
+	<a href="#word/success">First</a>
+	<a href="#word/sober">Second</a>
+	<a href="#word/courage">Third</a>
+	
+	<div ng-view></div>
+	
+</body>
+</html>
