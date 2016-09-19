@@ -14,7 +14,7 @@
 		$routeProvider
 			.when('/word/:origin', {
 				templateUrl: 'word.html',
-				controller: 'WordController'
+				controller: 'WordController as word'
 			});
 	}
 })(window.angular);
