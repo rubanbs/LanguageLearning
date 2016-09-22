@@ -6,6 +6,7 @@
 		
 	function MainController ($location, $scope, storage, search){
 		
+		$scope.inProgress = false;		
 		$scope.nextWord = nextWord;
 		
 		function nextWord() {

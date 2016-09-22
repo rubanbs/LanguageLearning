@@ -1,5 +1,6 @@
 <!doctype html>
 <html ng-app="app">
+<meta charset="UTF-8">
 <head>
 	<link type="text/css" rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" />
 	<link type="text/css" rel="stylesheet" href="main.css" />
@@ -10,7 +11,7 @@
 	<script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="bower_components/lodash/dist/lodash.min.js"></script>
 	<script type="text/javascript" src="app.js"></script>
-	<script type="text/javascript" src="storage.js"></script>
+	<script type="text/javascript" src="storage.js" charset="Windows-1251"></script>
 	<script type="text/javascript" src="main.controller.js"></script>
 	<script type="text/javascript" src="start.controller.js"></script>
 	<script type="text/javascript" src="word.controller.js"></script>
@@ -29,8 +30,8 @@
 		<div ng-view class="view-animate"></div>
 	</div>
 
-	<button>Prev</button>
-	<button ng-click="nextWord()">Next</button>
+	<button ng-show="inProgress">Prev</button>
+	<button ng-show="inProgress" ng-click="nextWord()">Next</button>
 
 </body>
 </html>

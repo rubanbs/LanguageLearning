@@ -7,11 +7,13 @@
 	function StartController ($scope, search){
 		
 		$scope.start = start;
+		$scope.$parent.inProgress = false;
 		
 		function start() {
 			
 			search.set({ stars: $scope.stars });
 			
+			$scope.$parent.inProgress = true;
 			$scope.$parent.nextWord();
 		}
 	}
