@@ -4,13 +4,13 @@
 		.module('main.controller', [])
 		.controller('MainController', MainController);
 		
-	function MainController ($location, $scope, storage){
+	function MainController ($location, $scope, storage, search){
 		
-		$scope.next = next;
+		$scope.nextWord = nextWord;
 		
-		function next(){
+		function nextWord() {
 			
-			var word = storage.getRandom();
+			var word = storage.getRandom(+search.get().stars);
 			
 			$location.path('/word/' + word.origin);
 		}

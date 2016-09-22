@@ -12,13 +12,14 @@
 	<script type="text/javascript" src="app.js"></script>
 	<script type="text/javascript" src="storage.js"></script>
 	<script type="text/javascript" src="main.controller.js"></script>
+	<script type="text/javascript" src="start.controller.js"></script>
 	<script type="text/javascript" src="word.controller.js"></script>
 
 	
 </head>
 <body ng-controller="MainController">
 
-	<a href="#">Main</a>
+	<a href="#start">Main</a>
 	<br/>
 	<a href="#word/success">First</a>
 	<a href="#word/sober">Second</a>
@@ -29,7 +30,7 @@
 	</div>
 
 	<button>Prev</button>
-	<button ng-click="next()">Next</button>
+	<button ng-click="nextWord()">Next</button>
 
 </body>
 </html>

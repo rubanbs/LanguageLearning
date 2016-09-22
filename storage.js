@@ -2,38 +2,64 @@
 
 	angular
 		.module('storage', [])
+		.factory('search', search)
 		.factory('storage', storage);
+	
+	var searchOptions = {
+		stars: 0
+	};
+	
+	function search() {
+		
+		return {
+			
+			get: function() {
+				
+				return searchOptions;
+			},
+			
+			set: function(params) {
+				
+				searchOptions.stars = params.stars;
+			}
+		};
+	}
 	
 	var words = [
 			{
 				id: 1,
 				origin: "success",
 				translation: "успех",
-				usedInRound: false
+				usedInRound: false,
+				stars: 0
 			},
 			{
 				id: 2,
 				origin: "sober",
 				translation: "трезвый",
-				usedInRound: false
+				usedInRound: false,
+				stars: 0
 			},
 			{
 				id: 3,
 				origin: "courage",
 				translation: "смелый",
-				usedInRound: false
+				usedInRound: false,
+				stars: 0
 			},
 			{
 				id: 4,
 				origin: "bold",
 				translation: "смелый",
-				usedInRound: false
+				usedInRound: false,
+				stars: 1
 			},
 			{
 				id: 5,
 				origin: "band",
 				translation: "канат, веревка",
-				usedInRound: false
+				usedInRound: false,
+				stars: 1
 			}
 		];
 	
@@ -48,14 +74,14 @@
 				return _.find(words, ["origin", origin]);
 			},
 			
-			getRandom: function (){
+			getRandom: function (stars) {
 				
 				if (newRound) {
 					words = _.shuffle(words);
 					newRound = false;
 				}
 				
-				var word = _.find(words, { usedInRound: false });
+				var word = stars ? _.find(words, { stars: stars, usedInRound: false }) : _.find(words, { usedInRound: false });
 				
 				if (word) {
 					
