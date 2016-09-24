@@ -5,6 +5,7 @@
 			'storage',
 			'ngRoute',
 			'ngAnimate',
+			'containerResize.directive',
 			'main.controller',
 			'start.controller',
 			'word.controller'
