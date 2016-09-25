@@ -776,3 +776,5 @@
 /node_modules/statuses/package.json
 /bower_components
 /node_modules
+/client/bower_components
+/manage/bower_components

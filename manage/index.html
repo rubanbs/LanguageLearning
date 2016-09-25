@@ -1,0 +1,23 @@
+<!doctype html>
+<html ng-app="app">
+    <meta charset="UTF-8">
+    <head>
+        <link type="text/css" rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" />
+        <link type="text/css" rel="stylesheet" href="main.css" />
+        <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+        <script type="text/javascript" src="bower_components/angular/angular.js"></script>
+        <script type="text/javascript" src="bower_components/angular-route/angular-route.min.js"></script>
+        <script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="bower_components/lodash/dist/lodash.min.js"></script>
+        <script type="text/javascript" src="app.js"></script>
+        <script type="text/javascript" src="main.controller.js"></script>
+        <script type="text/javascript" src="words.controller.js"></script>
+        <script type="text/javascript" src="word.controller.js"></script>
+
+    </head>
+    <body ng-controller="MainController">
+
+        <div ng-view></div>
+
+    </body>
+</html>
