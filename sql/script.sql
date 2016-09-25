@@ -20,7 +20,6 @@ create database LanguageLearning
     name char(8) not null
   );
   
-  drop table wordtype;
   
   insert into wordtype (id, name) values (1, 'word');
   insert into wordtype (id, name) values (2, 'phrase');

@@ -2,6 +2,9 @@
 	<div class="row">
 		<div class="col col-xs-6">
 			<a href="https://translate.google.ru/#en/ru/{{word.origin}}" target="_blank" class="origin-word">{{word.origin}}</a>
+			<div>
+				{{word.origincomments}}
+			</div>
 		</div>
 		<div class="col col-xs-6">
 			<div ng-show="!opened">
@@ -9,6 +12,10 @@
 			</div>
 			<div ng-show="opened">
 				{{word.translation}}
+				
+				<div>
+					{{word.translationcomments}}
+				</div>
 			</div>
 		</div>
 	</div>

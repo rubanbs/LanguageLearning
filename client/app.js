@@ -5,6 +5,7 @@
 			'storage',
 			'ngRoute',
 			'ngAnimate',
+			'LocalStorageModule',
 			'containerResize.directive',
 			'main.controller',
 			'start.controller',
@@ -12,7 +13,8 @@
 		])
 		.config(config);
 		
-	function config($routeProvider, $locationProvider){
+	function config($routeProvider, $locationProvider, localStorageServiceProvider){
+		
 		$routeProvider
 			.when('/start', {
 				templateUrl: 'start.html',
@@ -23,5 +25,10 @@
 				controller: 'WordController'
 			})
 			.otherwise('/start');
+			
+		localStorageServiceProvider
+			.setPrefix('LL')
+			.setStorageType('localStorage')
+			.setDefaultToCookie(false);
 	}
 })(window.angular);

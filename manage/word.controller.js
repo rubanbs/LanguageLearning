@@ -10,11 +10,23 @@
 
         function save() {
 
-            $http.post('/word').then(function(res){
-                
-                debugger;
-            }, function(res){
-                
+            var data = {
+                origin: $scope.word.origin,
+                origincomments: $scope.word.origincomments,
+                translation: $scope.word.translation,
+                translationcomments: $scope.word.translationcomments,
+                type: $scope.type
+            };
+
+            $http.post('/word', data).then(function (res) {
+
+                if (res.data.errno) {
+                    alert(res.data.code);
+                } else {
+                    $scope.word = {};
+                }
+            }, function (res) {
+
                 alert(res.data);
             });
         }

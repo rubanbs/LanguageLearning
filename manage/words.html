@@ -20,7 +20,9 @@
     <table class="table">
         <tr ng-repeat="word in words">
             <td>{{word.origin}}</td>
+            <td>{{word.origincomments}}</td>
             <td>{{word.translation}}</td>
+            <td>{{word.translationcomments}}</td>
             <td>
                 <a href="#word/{{word.id}}" class="btn btn-default">
                     <span class="glyphicon glyphicon-edit"></span>

@@ -4,7 +4,7 @@
         .module('main.controller', [])
         .controller('MainController', MainController);
 
-    function MainController($location, $scope, $http, storage, search) {
+    function MainController($location, $scope, $http, localStorageService, storage, search) {
 
         $scope.inProgress = false;
         $scope.nextWord = nextWord;
@@ -18,8 +18,10 @@
         }
         
         function downloadAll(){
+			
             $http.get('/words').then(function(res){
                 
+				localStorageService.set('words', res.data);
             });
         }
     }

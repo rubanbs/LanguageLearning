@@ -25,47 +25,13 @@
 		};
 	}
 	
-	var words = [
-			{
-				id: 1,
-				origin: "success",
-				translation: "успех",
-				usedInRound: false,
-				stars: 0
-			},
-			{
-				id: 2,
-				origin: "sober",
-				translation: "трезвый",
-				usedInRound: false,
-				stars: 0
-			},
-			{
-				id: 3,
-				origin: "courage",
-				translation: "смелый",
-				usedInRound: false,
-				stars: 0
-			},
-			{
-				id: 4,
-				origin: "bold",
-				translation: "смелый",
-				usedInRound: false,
-				stars: 1
-			},
-			{
-				id: 5,
-				origin: "band",
-				translation: "канат, веревка",
-				usedInRound: false,
-				stars: 1
-			}
-		];
+	var words;
 	
 	var newRound = true;
 	
-	function storage () {
+	function storage (localStorageService) {
+		
+		words = words || localStorageService.get('words');
 		
 		return {
 			
