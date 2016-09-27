@@ -21,6 +21,7 @@
 			
             $http.get('/words').then(function(res){
                 
+				storage.set(res.data);
 				localStorageService.set('words', res.data);
             });
         }

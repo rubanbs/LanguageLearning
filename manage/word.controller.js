@@ -24,6 +24,7 @@
                     alert(res.data.code);
                 } else {
                     $scope.word = {};
+                    angular.element('#origin').focus()
                 }
             }, function (res) {
 

@@ -23,3 +23,22 @@ create database LanguageLearning
   
   insert into wordtype (id, name) values (1, 'word');
   insert into wordtype (id, name) values (2, 'phrase');
+  
+  create table materials (
+	id int not null primary key auto_increment,
+    name varchar(35) not null
+  );
+  
+  alter table words add materialid int not null;
+  
+  alter table words add constraint fk_wordtype foreign key (typeid) references wordtype(id);
+  alter table words add constraint fk_meterial foreign key (materialid) references meterials(id);
+  
+  create table wordreferences (
+	id int not null primary key auto_increment,
+    wordid int not null,
+    wordreferenceid int not null
+  );
+  
+  alter table wordreferences add constraint fk_word foreign key (wordid) references words(id);
+  alter table wordreferences add constraint fk_wordreference foreign key (wordreferenceid) references words(id);

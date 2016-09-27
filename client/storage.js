@@ -67,6 +67,11 @@
 				}
 				
 				return word;
+			},
+			
+			set: function(newWords) {
+				
+				words = newWords;
 			}
 		};
 	}
