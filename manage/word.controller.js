@@ -15,7 +15,7 @@
                 origincomments: $scope.word.origincomments,
                 translation: $scope.word.translation,
                 translationcomments: $scope.word.translationcomments,
-                type: $scope.type
+                typeid: $scope.word.type
             };
 
             $http.post('/word', data).then(function (res) {
