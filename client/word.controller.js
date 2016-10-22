@@ -8,6 +8,7 @@
 		
 		$scope.opened = false;
 		$scope.$parent.inProgress = true;
+		$scope.translation = $scope.$parent.translation;
 		$scope.word = storage.getWord($routeParams.origin);
 		
 		$scope.showTranslation = showTranslation;

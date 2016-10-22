@@ -6,6 +6,7 @@
 
     function MainController($location, $scope, $http, localStorageService, storage, search) {
 
+		$scope.translation = "ruseng";
         $scope.inProgress = false;
         $scope.nextWord = nextWord;
         $scope.downloadAll = downloadAll;
