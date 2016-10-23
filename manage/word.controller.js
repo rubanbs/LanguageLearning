@@ -6,10 +6,17 @@
 
     function WordController($scope, $http) {
 
+        $scope.word = {
+            origin: '',
+            origincomments: '',
+            translation: '',
+            translationcomments: ''
+        };
+        
         $scope.save = save;
+        $scope.addPronNote = addPronNote;
 
         function save() {
-
             var data = {
                 origin: $scope.word.origin,
                 origincomments: $scope.word.origincomments,
@@ -30,6 +37,10 @@
 
                 alert(res.data);
             });
+        }
+
+        function addPronNote() {
+            $scope.word.origincomments = ($scope.word.origincomments || '') + "pron (!)";
         }
     }
 

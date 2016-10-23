@@ -23,12 +23,15 @@
                     <textarea class="form-control" rows="5" id="origincomments" ng-model="word.origincomments" tabindex="3"></textarea>
                 </div>
                 <div class="form-group">
-                    <div class="col-xs-12">
+                    <div class="col-xs-3">
                         <div class="checkbox">
                             <label>
                                 <input type="checkbox" id="type" ng-model="word.type"> It's a Phrase
                             </label>
                         </div>
+                    </div>
+                    <div class="col-xs-9">
+                        <a href="" class="btn btn-default" ng-click="addPronNote()">Pronunciation</a>
                     </div>
                 </div>
             </div>
