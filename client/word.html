@@ -1,54 +1,54 @@
 <div class="container text-center">
 
-	<div class="row" ng-if="translation === 'ruseng'">
-	
-		<div class="col col-xs-6">
-		
-			{{word.translation}}
-			<div>
-				{{word.translationcomments}}
-			</div>
-			
-		</div>	
-		
-		<div class="col col-xs-6">
-		
-			<div ng-show="!opened">
-				<button ng-click="showTranslation()" class="btn btn-default btn-lg">Open</button>
-			</div>
-			
-			<div ng-show="opened">
-			
-				<a href="https://translate.google.ru/#en/ru/{{word.origin}}" target="_blank" class="origin-word">{{word.origin}}</a>
-				<div>
-					{{word.origincomments}}
-				</div>
-			</div>
-		</div>
-		
-		
-		
-	</div>
-	
-	<div class="row" ng-if="translation === 'engrus'">
-		<div class="col col-xs-6">
-			<a href="https://translate.google.ru/#en/ru/{{word.origin}}" target="_blank" class="origin-word">{{word.origin}}</a>
-			<div>
-				{{word.origincomments}}
-			</div>
-		</div>
-		<div class="col col-xs-6">
-			<div ng-show="!opened">
-				<button ng-click="showTranslation()" class="btn btn-default btn-lg">Open</button>
-			</div>
-			<div ng-show="opened">
-				{{word.translation}}
-				
-				<div>
-					{{word.translationcomments}}
-				</div>
-			</div>
-		</div>
-	</div>
-	
+    <div class="row" ng-if="translation === 'ruseng'">
+
+        <div class="col col-xs-6">
+
+            {{word.translation}}
+            <div>
+                {{word.translationcomments}}
+            </div>
+
+        </div>	
+
+        <div class="col col-xs-6">
+
+            <div ng-show="!opened">
+                <button ng-click="showTranslation()" class="btn btn-default btn-lg">Open</button>
+            </div>
+
+            <div ng-show="opened">
+
+                <a href="https://translate.google.ru/#en/ru/{{word.origin}}" target="_blank" class="origin-word">{{word.origin}}</a>
+                <div>
+                    {{word.origincomments}}
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+    <div class="row" ng-if="translation === 'engrus'">
+        <div class="col col-xs-6">
+            <a href="https://translate.google.ru/#en/ru/{{word.origin}}" target="_blank" class="origin-word">{{word.origin}}</a>
+            <div>
+                {{word.origincomments}}
+            </div>
+        </div>
+        <div class="col col-xs-6">
+            <div ng-show="!opened">
+                <button ng-click="showTranslation()" class="btn btn-default btn-lg">Open</button>
+            </div>
+            <div ng-show="opened">
+                {{word.translation}}
+
+                <div>
+                    {{word.translationcomments}}
+                </div>
+            </div>
+        </div>
+    </div>
+
 </div>

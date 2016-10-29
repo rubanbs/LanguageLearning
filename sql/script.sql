@@ -42,3 +42,5 @@ create database LanguageLearning
   
   alter table wordreferences add constraint fk_word foreign key (wordid) references words(id);
   alter table wordreferences add constraint fk_wordreference foreign key (wordreferenceid) references words(id);
+  
+  alter table words add usedInRound bool not null default false;
