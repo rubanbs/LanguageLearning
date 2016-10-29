@@ -1,25 +1,59 @@
+<div class="container">
+    <div class="row">
+        <div class="col col-xs-10 col-xs-offset-1">
+            <div class="form-group">
+                <label>Stars:</label>
+                <select ng-model="stars" class="form-control">
+                    <option value="0">All</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col col-xs-10 col-xs-offset-1">
+            <div class="form-group">
+                <label>Materials:</label>
+                <select ng-model="material" multiple class="form-control">
+                    <option value="4">Friends</option>
+                    <option value="44">Overall</option>
+                    <option value="45">Phrases</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col col-xs-10 col-xs-offset-1">
+            <div class="form-group">
+                <label>Type:</label>
+                <select ng-model="type" multiple class="form-control">
+                    <option value="0">Word</option>
+                    <option value="1">Phrases</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col col-xs-10 col-xs-offset-1">
+            <div class="form-group">
+                <label>Translation:</label>
+                <select ng-model="translation" class="form-control">
+                    <option value="ruseng" selected="selected">Русский > Английский</option>
+                    <option value="engrus">English > Russian</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col col-xs-4 col-xs-offset-4">
+            <div class="form-group">
+                <button ng-click="start()" class="btn btn-primary btn-lg btn-block">Go</button>
+            </div>
+        </div>
+    </div>
 
-<span>Stars:</span>
-<select ng-model="stars">
-	<option value="0">All</option>
-	<option value="1">1</option>
-	<option value="2">2</option>
-	<option value="3">3</option>
-	<option value="4">4</option>
-	<option value="5">5</option>
-</select>
-<select ng-model="material" multiple>
-	<option value="4">Friends</option>
-	<option value="44">Overall</option>
-        <option value="45">Phrases</option>
-</select>
-<select ng-model="type" multiple>
-	<option value="0">Word</option>
-	<option value="1">Phrases</option>
-</select>
-<select ng-model="translation">
-	<option value="ruseng" selected="selected">Русский > Английский</option>
-	<option value="engrus">English > Russian</option>
-</select>
-
-<button ng-click="start()" class="btn btn-primary">Go</button>
+</div>
